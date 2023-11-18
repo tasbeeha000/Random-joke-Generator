@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @font-face {
+        font-family: roboto;
+        src: url(Roboto-Regular.ttf);
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: roboto;
+      background-color:rgb(244, 179, 58);
+    }
+
+
+    .content {
+      color: white;
+      text-align: center;
+      border: 2px solid black;
+      padding: 30px 30px;
+      background-color: black;
+      border-radius: 7px;
+      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+      max-width: 300px;
+      max-height: 400px;
+      margin-left: 5px;
+      margin-right: 5px;
+     
+    }
+
+    .js-joke{
+        font-size: 20px;
+        margin-bottom: 40px;
+       
+
+    }
+    .text{
+        font-size: 25px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    .content button{
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .content button{
+    
+        background-color:rgb(244, 179, 58) ;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: 1px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    .content button:hover{
+      
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+     
+   
+      
+       
+    }
+
+    
+</style>
+<body>
+
+    
+      <div class="content">
+        <div>
+            <h3 class="text" style="margin-bottom: 50px;">
+                Tell Me a Joke !
+               </h3>
+             
+             
+           
+           <p class="js-joke"> </p>
+           <button onclick="TellJoke();"
+           >Get a Random Joke</button>
+
+        </div>
+  
+       
+      </div>
+  
+    <script>
+
+
+   function TellJoke()
+   {
+    let result;
+    let jokes = [
+    "Why don't scientists trust atoms? Because they make up everything!",
+    "I'm reading a book on anti-gravity. It's impossible to put down!",
+    "Did you hear about the mathematician who's afraid of negative numbers? He'll stop at nothing to avoid them.",
+    "Parallel lines have so much in common. It's a shame they'll never meet.",
+    "Why was the math book sad? It had too many problems.",
+    "How do you catch a squirrel? Climb a tree and act like a nut!",
+    "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "What do you call a factory that makes okay products? A satisfactory.",
+    "Why did the tomato turn red? Because it saw the salad dressing!",
+    "What's orange and sounds like a parrot? A carrot.",
+    "I'm reading a book on anti-gravity. It's impossible to put down!",
+    "I used to play piano by ear, but now I use my hands.",
+    "How do you organize a space party? You 'planet'!",
+    "Why don't oysters donate to charity? Because they are shellfish!",
+    "I'm on a seafood diet. I see food, and I eat it.",
+    "Why was the belt arrested? It was holding up a pair of pants!",
+    "What do you get when you cross a snowman with a vampire? Frostbite.",
+    "How do you catch a squirrel? Climb a tree and act like a nut!",
+    "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "What do you call a factory that makes okay products? A satisfactory.",
+    "Why did the tomato turn red? Because it saw the salad dressing!",
+    "What's orange and sounds like a parrot? A carrot.",
+    "I'm reading a book on anti-gravity. It's impossible to put down!",
+    "I used to play piano by ear, but now I use my hands.",
+    "How do you organize a space party? You 'planet'!",
+    "Why don't oysters donate to charity? Because they are shellfish!",
+    "I'm on a seafood diet. I see food, and I eat it.",
+    "Why was the belt arrested? It was holding up a pair of pants!",
+    "What do you get when you cross a snowman with a vampire? Frostbite.",
+    "How do you catch a squirrel? Climb a tree and act like a nut!",
+    "Why did the scarecrow win an award? Because he was outstanding in his field.",
+    "What do you call a factory that makes okay products? A satisfactory.",
+    "Why did the tomato turn red? Because it saw the salad dressing!",
+    "What's orange and sounds"
+
+   ]; 
+//Math.random() * jokes.length: This multiplies the random number by the length of the jokes array. The result is a floating-point number between 0 (inclusive) and the length of the array (exclusive).
+
+//Math.floor(...): This rounds down the floating-point number to the nearest integer. This ensures that the result is a whole number within the valid index range of the array
+
+
+   let randomIndex = Math.floor(Math.random() * jokes.length);
+    result = document.querySelector('.js-joke').innerHTML = jokes[randomIndex];
+
+
+
+
+
+   }
+
+    </script>
+    
+</body>
+</html>
